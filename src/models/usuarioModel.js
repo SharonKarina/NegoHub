@@ -26,3 +26,15 @@ const usuarioSchema = mongoose.Schema({
 module.exports = mongoose.model("Usuario", usuarioSchema);
 
 
+/*
+formato para creacion en Postman 
+
+{
+    "nombre": "",
+    "correo": "",
+    "contraseña": "",
+    "rol": ""
+    
+}
+
+*/

@@ -32,3 +32,17 @@ const negocioSchema = mongoose.Schema({
 
 module.exports = mongoose.model("Negocio", negocioSchema);
 
+
+/*
+formato para creacion en Postman 
+
+{
+    "razonSocial": "",
+    "descripcion": "",
+    "telefono": "",
+    "correo": "",
+    "idUsuario": "",
+    "idCategoria": "",
+}
+
+*/
