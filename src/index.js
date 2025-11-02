@@ -11,7 +11,7 @@ app.use(parser.json()); // transforma los datos a formato JSON
 
 //Gestión de las rutas usando el middleware
 app.use("/api", negocioRoutes);
-app.use("/api", usuarioRoures);
+app.use("/api", usuarioRoutes);
 app.use("/api", categoriaRoutes);
 app.use(express.json());
 
