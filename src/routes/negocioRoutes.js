@@ -14,6 +14,8 @@ router.post("/negocio", (req, res) => {
 //Consultar todos los negocios
 router.get("/negocio", (req, res) => {
     negocioSchema.find()
+        .populate("idUsuario")
+        .populate("idCategoria")
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
