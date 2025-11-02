@@ -53,4 +53,13 @@ router.get("/negocio/:id", (req, res) => {
         .catch((error) => res.json({ message: error }));
 });
 
+//Buscar negocios por nombre
+router.get("/negocio/buscar", (req, res) => {
+    const { nombre } = req.query;
+    negocioSchema.find({ razonSocial: { $regex: nombre, $options: "i" } })
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+});
+
+
 module.exports = router;
