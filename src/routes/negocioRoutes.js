@@ -43,4 +43,12 @@ router.delete("/negocio/:id", (req, res) => {
         });
 });
 
+//Consulta de negocio por ID
+router.get("/negocio/:id", (req, res) => {
+    const { id } = req.params;
+    negocioSchema.findById(id)
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+});
+
 module.exports = router;

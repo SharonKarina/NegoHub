@@ -16,7 +16,7 @@ module.exports = mongoose.model("categoria", categoriaSchema);
 formato para creacion en Postman 
 
 {
-    "nombre": """
+    "nombre": ""
 }
 
 */
