@@ -14,12 +14,15 @@ const usuarioSchema = mongoose.Schema({
         type: String, //Tipo de dato
         required: true, //Campo obligatorio
     },
-    rol: {
-        type: ,
-        required: ,
-        unique: ,
+     rol: {
+        type: String,
+        required: true,
+        enum: ["administrador", "negocio", "cliente"], // <--- lista de roles válidos
+        default: "cliente" // <--- Valor por defecto si no se envía
     }
 });
 
 //Exporta el modelo para poder usarlo en rutas
 module.exports = mongoose.model("Usuario", usuarioSchema);
+
+
